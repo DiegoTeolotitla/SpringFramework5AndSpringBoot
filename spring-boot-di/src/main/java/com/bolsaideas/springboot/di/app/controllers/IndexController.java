@@ -9,25 +9,26 @@ import com.bolsaideas.springboot.di.app.models.service.IServicio;
 
 @Controller
 public class IndexController {
-	
-	//Inyeccion por atributo
+
+	// Inyeccion por atributo
 	@Autowired
 	private IServicio servicio;
-	//Inyeccion por setter
-	/*@Autowired
-	public void setServicio(IServicio servicio) {
-		this.servicio = servicio;
-	}*/
-	//Inyección por constructor, puede o no llevar el @Autowired
-	//ya que implicitamente spring inyecta por constructor
-	/*@Autowired
-	public IndexController(IServicio servicio) {
-		this.servicio = servicio;
-	}*/
-	@GetMapping({"/index","/",""})
+
+	// Inyeccion por setter
+	/*
+	 * @Autowired public void setServicio(IServicio servicio) { this.servicio =
+	 * servicio; }
+	 */
+	// Inyección por constructor, puede o no llevar el @Autowired
+	// ya que implicitamente spring inyecta por constructor
+	/*
+	 * @Autowired public IndexController(IServicio servicio) { this.servicio =
+	 * servicio; }
+	 */
+	@GetMapping({ "/index", "/", "" })
 	public String index(Model model) {
 		model.addAttribute("objeto", servicio.operacion());
 		return "index";
 	}
-	
+
 }
