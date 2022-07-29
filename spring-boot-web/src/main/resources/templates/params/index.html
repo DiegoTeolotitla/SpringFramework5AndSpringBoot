@@ -11,6 +11,10 @@
 				Andres</a></li>
 		<li><a th:href="@{/params/string(texto='Que tal diego')}">Hola
 				Diego</a></li>
+		<li><a th:href="@{/params/mix-params(saludo='Que tal Royyyyy', numero=7)}">Hola
+				Roy /params/mix-params?saludo=Que tal Royyyyy&numero=7</a></li>
+		<li><a th:href="@{/params/mix-params-request(saludo='Que tal Royyyyy', numero=8)}">Hola
+				Roy /params/mix-params-request?saludo=Que tal Royyyyy&numero=7</a></li>
 
 	</ul>
 </body>
