@@ -13,7 +13,7 @@ public class IndexController {
 
 	// Inyeccion por atributo
 	@Autowired
-	@Qualifier("miserviciocomplejo")
+	@Qualifier("miServicioComplejo")
 	private IServicio servicio;
 
 	// Inyeccion por setter

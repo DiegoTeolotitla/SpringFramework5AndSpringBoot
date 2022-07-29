@@ -1,8 +1,6 @@
 package com.bolsaideas.springboot.di.app.models.service;
 
-import org.springframework.stereotype.Service;
-
-@Service("miservicio")
+//@Service("miservicio")
 public class Miservicio implements IServicio {
 
 	@Override
